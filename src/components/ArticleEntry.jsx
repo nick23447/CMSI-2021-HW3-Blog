@@ -1,9 +1,13 @@
 import { useState } from "react"
 
-export default function ArticleEntry({ addArticle }) {
+
+
+export default function ArticleEntry({ addArticle, setWriting }) {
   const [title, setTitle] = useState("")
   const [body, setBody] = useState("")
   const [error, setError] = useState(null)
+
+  
 
   function submit(e) {
     setError(null)
@@ -15,6 +19,12 @@ export default function ArticleEntry({ addArticle }) {
     }
   }
 
+  function back() {
+    setWriting(false)
+
+  }
+    
+    
   return (
     <div>
       <form onSubmit={submit}>
@@ -27,7 +37,8 @@ export default function ArticleEntry({ addArticle }) {
           value={body}
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
-        <button type="submit">Create</button>
+        <button type="submit" id="button1">Create</button>
+        <button type="button" onClick={back} id="button2">Back</button>
       </form>
     </div>
   )

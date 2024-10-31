@@ -1,6 +1,8 @@
 export default function Nav({ articles, setArticle }) {
   return (
     <nav>
+      <h2>Articles</h2>
+      <section>
       {!articles
         ? "No articles"
         : articles.map((a) => (
@@ -8,6 +10,8 @@ export default function Nav({ articles, setArticle }) {
               {a.title}
             </p>
           ))}
+      </section>
     </nav>
+
   )
 }
