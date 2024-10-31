@@ -8,8 +8,6 @@ Assignment: Homework 3
 
 Date: 10/31/24
 
-Sources: 
-
 ---
 
 ### Welcome to the Blog!
